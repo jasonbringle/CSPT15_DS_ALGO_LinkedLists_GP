@@ -22,8 +22,11 @@ class LinkedListNode():
         self.next  = None
 
 def delete_node(delete_this_node):
-    # Your code here
-    pass
+    next = delete_this_node.next
+
+    if next:
+        delete_this_node.value = next.value
+        delete_this_node.next = next.next
 
 
 x = LinkedListNode('X')
